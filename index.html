@@ -1,0 +1,54 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Dynamic Resume Builder</title>
+        <link rel="stylesheet" href="style.css"> 
+        
+    </head>
+    <body>
+        
+        <h1> Unique Path and Shareable Link </h1>
+        <form id="resumeForm">
+            <fieldset>
+                 <legend>Personal Information</legend>
+                  <label for="name">Name :</label>
+                  <input type="text" id="name" name="name" pattern="[A-Za-z]{3,12}+" title="Name must be in between 3 and 12 characters in length and contain only letters from Aa to Zz." placeholder="Enter Your Name" required>
+                 <label for="email">Email :</label>
+                 <input type="email" id="email" name="email" placeholder="Enter Your Email"required>
+                 <label for="phone">Contact No. :</label>
+                 <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{7}" title="Enter Contact No. like 0312-8769098"placeholder="Enter Your Contact Number"required>
+                </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <label for="education">Education :</label>
+                <textarea id="education" name="education" rows="4" placeholder="Enter Your Education" required></textarea><br>
+           </fieldset>
+
+           <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience :</label>
+            <textarea id="experience" name="experience" rows="4" placeholder="Enter Your Experience" required></textarea><br>
+       </fieldset>
+       
+       <fieldset>
+        <legend>Skills</legend>
+        <label for="skills">Skills :</label>
+        <textarea id="skills" name="skills" rows="4" placeholder="Enter Your Skills"required></textarea><br>
+        </fieldset>
+       <button type="submit"> Generate Resume</button>
+       <button type="submit">Generate Unique URL</button>
+       <button id="copyBtn">Copy URL</button>
+       <button id="shareTwitter">Share on Twitter</button>
+       <button id="shareFacebook">Share on Facebook</button>
+       <button id="downloadBtn">Download Resume as PDF</button>
+        </form>
+
+        <div id="resumeGenerated"></div>
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    </body>
+    </html>
